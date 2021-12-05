@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"> <!--character encoding-->
+    <title>Pizza Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!--bootstrap 4 style sheet-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--imports jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> <!--imports popper.js library-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <!--imports bootstrap 4 library-->
+    <link rel="stylesheet" href="pizza.css"> <!--Pizza Style sheet-->
+    <script src="pizza.js"></script> <!--Javascript import-->
+</head>
+
+<body style="background-color: black;">
+    <div>
+        <img id="guy" src="Icon.png" alt="icon" style="margin-right: 10%; margin-left: 5%; height: 300px; width: 300px;">
+        <img id="logo" src="Logo.png" alt="logo" style="margin-right: 10%; height: 300px; width: 300px;">
+        <img id="sign" src="JustOpened.png" alt="JustOpened" style="height:200px;width:500px;">
+    </div>
+
+    <div style="background-color: white; border: 3px solid rgb(190, 0, 0);">
+        <nav id="header" style="font-size: 2vw; position: relative; top: 25%; width: 100%; left: 20%;">
+            <a href="#/home" class="menuItems" onclick="showPageSection('home')">HOME</a>
+            <a href="#/about-us" class="menuItems" onclick="showPageSection('about-us')">ABOUT US</a>
+            <a href="#/menu" class="menuItems" onclick="showPageSection('menu')">MENU</a>
+            <a href="#/contact" class="menuItems" onclick="showPageSection('contact')">CONTACT</a>
+        </nav>
+    </div>
+
+    <div id="home">
+        <div class="position-relative" style="top: 90px;">
+            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                <div class="carousel-item active">
+                    <img src="slide.png" style="width: 100%; height: 500px;" alt="1">
+                </div>
+                <div class="carousel-item">
+                    <img src="slide2.png" style="width: 100%; height: 500px;" alt="2">
+                </div>
+                <div class="carousel-item">
+                    <img src="slide3.png" style="width: 100%; height: 500px;" alt="3">
+                </div>
+                <a class="carousel-control-prev" href="#carousel-id" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-id" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about-us" style="font-size: 2vw;visibility: hidden; top: 400px; position: absolute;">
+        <h1 style="left: 80%; position:relative; color: white;">About Us</h1>
+        <div class="row">
+            <div style="top: 50px; left: 40%;position: relative;color: white;">
+                <img src="about_image.png" alt="about" style="float: right; top: 50px; left: 100px; position: relative; height: 300px; width: 300px;">
+                <p>Why should you come here?</p>
+                <ul class="aboutList">
+                    <li class="aboutListElement">Great Deals</li>
+                    <li class="aboutListElement">Delicious Food</li>
+                    <li class="aboutListElement">Fast Service</li>
+                </ul>
+                <p id="descriptionText" style="top: 80px; left: 100px; position: relative;color: white;clear: both;">We are a pizzaria that serves great food at an excellent price.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="menu" style="visibility: hidden; top: 400px; left: 15%; position: absolute; width: 70%; height: 20%;">
+        <h1 style="text-align: center;width: 100%; color: white;">Menu</h1>
+        <div class="row">
+            <div class="card text-center">
+                <img class="card-img-top" src="slice1.png" alt="Card Image">
+                <div class="card-body">
+                    <h2 id="cheese" class="card-title">Cheese</h2>
+                    <h4 class="card-text">Regular slice with sauce and cheese</h4>
+                    <br><br>
+                    <a id="cheesePrice" href="#" onclick="itemOnClick('cheese', 'cheesePrice')" class="btn btn-primary">$3.00</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top" src="slice2.png" alt="Card Image">
+                <div class="card-body">
+                    <h2 id="pepperoni" class="card-title">Pepperoni</h2>
+                    <h4 class="card-text">Pizza with pepperoni topping</h4>
+                    <br><br>
+                    <a id="pepperoniPrice" href="#" onclick="itemOnClick('pepperoni', 'pepperoniPrice')" class="btn btn-primary">$4.00</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top" src="slice3.png" alt="Card Image">
+                <div class="card-body">
+                    <h2 id="mushroom" class="card-title">Mushroom</h2>
+                    <h4 class="card-text">Pizza with mushrooms</h4>
+                    <br><br>
+                    <a id="mushroomPrice" href="#" onclick="itemOnClick('mushroom', 'mushroomPrice')" class="btn btn-primary">$3.50</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top" src="slice4.png" alt="Card Image">
+                <div class="card-body">
+                    <h2 id="veggie" class="card-title">Veggie</h2>
+                    <h4 class="card-text">Pizza with veggie toppings</h4>
+                    <br><br>
+                    <a id="veggiePrice" href="#" onclick="itemOnClick('veggie', 'veggiePrice')" class="btn btn-primary">$3.50</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top" src="slice5.png" alt="Card Image">
+                <div class="card-body">
+                    <h2 id="bbq" class="card-title">BBQ</h2>
+                    <h4 class="card-text">pizza with chicken and bbq sauce</h4>
+                    <br><br>
+                    <a id="bbqPrice" href="#" onclick="itemOnClick('bbq', 'bbqPrice')" class="btn btn-primary">$4.50</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact" style="visibility: hidden; top: 400px; left: 25%; position:absolute">
+        <h1 style="width: 100%; text-align: center; color: white;">Contact</h1>
+        <div style="width: 800px; clear: both;"></div>
+            <form action="javascript:displayAlert()" method="post">
+                <ul style="list-style-type: none;">
+                    <li style="color: white;">Email: <input type="text" id="email" class="formInputField"></li>
+                    <li>&nbsp;</li>
+                    <li style="color: white;">Subject: <input type="text" id="subject" class="formInputField"></li>
+                    <li>&nbsp;</li>
+                    <li style="color: white;">Body: <textarea rows="4" cols="50" id="body" class="formInputField"></textarea></li>
+                    <li>&nbsp;</li>
+                    <li><input id="submitButton" type="submit" name="submit" value="Submit"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+ 
+
+</body>
+</html>
